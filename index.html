@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collacoto</title>
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="navbar">
+
+    <div class="logo">🌿 Collacoto</div>
+
+    <nav class="menu">
+      <a href="#inicio">Inicio</a>
+      <a href="#comunidad">Comunidad</a>
+      <a href="#galeria">Galería</a>
+      <a href="#mapa">Mapa</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+  </header>
+
+  <!-- HERO CON CARRUSEL -->
+
+  <section class="hero" id="inicio">
+
+    <!-- Slider -->
+
+    <div class="slider">
+
+      <div class="slide active">
+        <img src="Collacoto.png" alt="Collacoto">
+      </div>
+
+      <div class="slide">
+        <img src="Parque.jpeg" alt="Parque">
+      </div>
+
+      <div class="slide">
+        <img src="Iglesia.jpeg" alt="Iglesia">
+      </div>
+
+      <div class="slide">
+        <img src="Fiestas.jpeg" alt="Fiestas">
+      </div>
+
+      <div class="slide slide-video">
+        <video id="hero-video" src="fiestas.mp4" muted playsinline loop preload="auto">
+        </video>
+        <div class="slide-video-badge">▶ En vivo · Fiestas de Collacoto</div>
+      </div>
+
+    </div>
+
+    <!-- Capa oscura -->
+
+    <div class="overlay"></div>
+
+    <!-- Contenido -->
+
+    <div class="hero-content">
+
+      <h1>Bienvenidos a Collacoto</h1>
+
+      <p>
+        Un rincón de paz en los Andes ecuatorianos.
+        Descubre nuestra cultura, tradiciones y belleza natural.
+      </p>
+
+      <button onclick="document.getElementById('comunidad').scrollIntoView({behavior:'smooth'})">Explorar Comunidad</button>
+
+    </div>
+
+  </section>
+
+  <!-- COMUNIDAD -->
+
+  <section class="comunidad" id="comunidad">
+
+    <h2>Nuestra Comunidad</h2>
+
+    <p class="intro">
+      Conoce la historia, cultura y espíritu de Collacoto,
+      un lugar donde la tradición y la naturaleza se unen.
+    </p>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="card-icono">🏛️</div>
+
+        <h3>Nuestra Historia</h3>
+
+        <p>
+          Collacoto posee raíces ancestrales y una cultura
+          basada en el respeto por la tierra.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icono">👥</div>
+
+        <h3>Nuestra Gente</h3>
+
+        <p>
+          Somos familias trabajadoras que mantienen vivas
+          las costumbres y valores comunitarios.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icono">📅</div>
+
+        <h3>Actividades</h3>
+
+        <p>
+          Celebramos fiestas tradicionales, mingas y eventos
+          culturales que fortalecen nuestra identidad.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icono">🎵</div>
+
+        <h3>Cultura Viva</h3>
+
+        <p>
+          La música, gastronomía y artesanías forman parte
+          importante de nuestra comunidad.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- GALERIA -->
+
+  <section class="galeria" id="galeria">
+
+    <h2>Galería</h2>
+
+    <p class="galeria-subtitulo">
+      Imágenes que capturan la esencia de nuestra comunidad,
+      sus paisajes, tradiciones y momentos especiales.
+    </p>
+
+    <div class="gallery-grid">
+
+      <img src="CALLE.jpeg" alt="Calle dentro de Collacoto">
+
+      <img src="Casa barrial.jpeg" alt="Casa barrial típica de Collacoto">
+
+      <img src="Escuela.jpeg" alt="Una escuela local en Collacoto">
+
+      <img src="Gradas.jpeg" alt="Gradas pintorescas en Collacoto">
+
+      <img src="Iglesia.jpeg" alt="Iglesia emblemática de Collacoto">
+
+      <img src="Parque.jpeg" alt="Parque de Collacoto">
+
+      <img src="Noche.jpeg" alt="Fiesta nocturna en Collacoto">
+
+      <img src="Fiestas.jpeg" alt="Fiestas en Collacoto">
+
+      <img src="Festa.jpeg" alt="Fiestas tradicionales en Collacoto">
+
+    </div>
+
+  </section>
+
+  <!-- MAPA -->
+
+  <section class="mapa" id="mapa">
+
+    <h2>Ubicación</h2>
+
+    <p class="mapa-subtitulo">
+      Visítanos en Collacoto, ubicado en el cantón Quito,
+      provincia de Pichincha, Ecuador.
+    </p>
+
+    <div class="mapa-container">
+
+      <div class="mapa-box">
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15959.634407437654!2d-78.5500!3d-0.3500!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a1b2e3f0001%3A0x0!2sCollacoto!5e0!3m2!1ses!2sec!4v1"
+          allowfullscreen="" loading="lazy">
+        </iframe>
+
+      </div>
+
+      <div class="info-box">
+
+        <div class="info">
+
+          <div class="info-icono">📍</div>
+
+          <h3>Dirección</h3>
+
+          <p>
+            Parroquia Collacoto<br>
+            Cantón Quito<br>
+            Provincia de Pichincha<br>
+            Ecuador
+          </p>
+
+        </div>
+
+        <div class="info">
+
+          <div class="info-icono">🚗</div>
+
+          <h3>Cómo llegar</h3>
+
+          <p>
+            Desde Quito: 45 minutos en vehículo
+            por la Autopista General Rumiñahui
+            hacia el valle.
+          </p>
+
+        </div>
+
+        <div class="info">
+
+          <div class="info-icono">📞</div>
+
+          <h3>Contacto directo</h3>
+
+          <p>
+            Junta Parroquial<br>
+            Tel: +593 2 XXX XXXX
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACTO -->
+
+  <section class="contacto" id="contacto">
+
+    <h2>Contáctanos</h2>
+
+    <p class="contacto-subtitulo">
+      ¿Tienes preguntas o deseas visitarnos?
+      Envíanos un mensaje y te responderemos a la brevedad.
+    </p>
+
+    <div class="formulario-wrapper">
+
+      <h3>Envíanos un mensaje</h3>
+
+      <p>
+        Completa el formulario y nos pondremos en contacto contigo.
+      </p>
+
+      <!--
+            FORMULARIO FUNCIONAL:
+            Este formulario recibe los datos del visitante del portal.
+            "novalidate" permite controlar la validacion con JavaScript
+            y mostrar mensajes personalizados en la misma pagina.
+          -->
+      <form class="formulario" id="formulario-contacto" action="mailto:defaultcollacoto@gmail.com" method="post"
+        enctype="text/plain" novalidate>
+
+        <label for="nombre">Nombre completo</label>
+
+        <input id="nombre" name="nombre" type="text" required placeholder="Tu nombre">
+
+        <label for="email">Correo electrónico</label>
+
+        <input id="email" name="email" type="email" required placeholder="tu@correo.com">
+
+        <label for="mensaje">Mensaje</label>
+
+        <textarea id="mensaje" name="mensaje" required placeholder="Escribe tu mensaje aquí..."></textarea>
+
+        <p class="formulario-aviso" id="formulario-aviso" aria-live="polite"></p>
+
+        <button type="submit">
+          Enviar mensaje ✉️
+        </button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+  <!-- VIDEO FIESTAS -->
+
+  <section class="video-fiestas">
+
+    <div class="video-fiestas-texto">
+
+      <span class="video-tag">🎉 Festividades</span>
+
+      <h2>Revive la magia de nuestras fiestas</h2>
+
+      <p>
+        Cada año, Collacoto se viste de colores, música y tradición.
+        Mira cómo nuestra comunidad celebra con alegría y unidad.
+      </p>
+
+      <ul class="video-detalles">
+        <li>🥁 Música tradicional andina</li>
+        <li>🎆 Desfiles y comparsas</li>
+        <li>🍽️ Gastronomía típica</li>
+      </ul>
+
+    </div>
+
+    <div class="video-fiestas-player">
+
+      <div class="video-wrapper">
+
+        <video src="fiestas.mp4" controls poster="Fiestas.jpeg" preload="metadata">
+          Tu navegador no soporta videos HTML5.
+        </video>
+
+        <div class="video-overlay-texto">
+          <span>🎊 Fiestas de Collacoto</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer class="footer">
+
+    <div class="footer-content">
+
+      <div>
+
+        <h3>🌿 Collacoto</h3>
+
+        <p>
+          El portal de Collacoto busca mostrar información
+          de la comunidad, su cultura, ubicación y contenido multimedia.
+        </p>
+
+      </div>
+
+      <div>
+
+        <h4>Navegación</h4>
+
+        <p><a href="#inicio" class="footer-link">Inicio</a></p>
+        <p><a href="#comunidad" class="footer-link">Comunidad</a></p>
+        <p><a href="#galeria" class="footer-link">Galería</a></p>
+        <p><a href="#mapa" class="footer-link">Mapa</a></p>
+        <p><a href="#contacto" class="footer-link">Contacto</a></p>
+
+      </div>
+
+      <div>
+
+        <h4>Síguenos</h4>
+
+        <div class="footer-social">
+
+          <a href="https://www.facebook.com/sanmigueldecollacotooficial" target="_blank" rel="noopener" title="Facebook">📘</a>
+
+          <a href="https://www.instagram.com/sanmigueldecollacoto" target="_blank" rel="noopener" title="Instagram">📷</a>
+
+          <a href="mailto:defaultcollacoto@gmail.com" title="Correo">✉️</a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <p class="footer-copyright">
+      2025 Collacoto. Todos los derechos reservados.
+    </p>
+
+  </footer>
+
+  <!-- JAVASCRIPT DEL CARRUSEL -->
+
+  <script>
+
+    /*
+      INTERACCION Y CONTACTO:
+      Esta seccion hace funcional el formulario de contacto.
+      1. Captura el envio del formulario.
+      2. Valida que nombre, correo y mensaje no esten vacios.
+      3. Revisa que el correo tenga un formato basico correcto.
+      4. Simula la recepcion del mensaje guardandolo en un objeto.
+    */
+    const formularioContacto = document.getElementById("formulario-contacto");
+    const avisoFormulario = document.getElementById("formulario-aviso");
+
+    formularioContacto.addEventListener("submit", function (evento) {
+      // Evita que la pagina se recargue al presionar "Enviar mensaje".
+      evento.preventDefault();
+
+      const nombre = document.getElementById("nombre").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const mensaje = document.getElementById("mensaje").value.trim();
+      const correoValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+      // Validacion basica de datos solicitada para el portal.
+      if (!nombre || !email || !mensaje) {
+        avisoFormulario.textContent = "Por favor completa todos los campos antes de enviar.";
+        avisoFormulario.className = "formulario-aviso error";
+        return;
+      }
+
+      if (!correoValido) {
+        avisoFormulario.textContent = "Ingresa un correo electronico valido.";
+        avisoFormulario.className = "formulario-aviso error";
+        return;
+      }
+
+      // Armar y abrir Outlook con los datos del visitante.
+      const destinatario = formularioContacto.action.replace("mailto:", "");
+      const asunto = encodeURIComponent("Mensaje desde el Portal de Collacoto");
+      const cuerpo = encodeURIComponent(
+        "Nombre: " + nombre + "\n" +
+        "Correo: " + email + "\n\n" +
+        "Mensaje:\n" + mensaje
+      );
+
+      // Abre Outlook (o el cliente de correo predeterminado) con los datos listos.
+      window.location.href = "mailto:" + destinatario + "?subject=" + asunto + "&body=" + cuerpo;
+
+      avisoFormulario.textContent = "Se está abriendo tu cliente de correo para enviar el mensaje.";
+      avisoFormulario.className = "formulario-aviso exito";
+      formularioContacto.reset();
+    });
+
+    const slides = document.querySelectorAll(".slide");
+    const heroVideo = document.getElementById("hero-video");
+
+    let index = 0;
+    let timer;
+
+    function cambiarSlide() {
+
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+
+      // Pausar video si estaba activo
+      if (heroVideo) heroVideo.pause();
+
+      index++;
+      if (index >= slides.length) index = 0;
+
+      slides[index].classList.add("active");
+
+      // Si el slide activo tiene video, reproducirlo y esperar más
+      const slideActivo = slides[index];
+      if (slideActivo.classList.contains("slide-video") && heroVideo) {
+        heroVideo.currentTime = 0;
+        heroVideo.play();
+        // Esperar duración del video (máx 10s) antes de avanzar
+        clearInterval(timer);
+        const espera = Math.min((heroVideo.duration || 10) * 1000, 10000);
+        setTimeout(() => {
+          timer = setInterval(cambiarSlide, 4000);
+        }, espera);
+        return;
+      }
+    }
+
+    timer = setInterval(cambiarSlide, 4000);
+
+  </script>
+
+</body>
+
+</html>
