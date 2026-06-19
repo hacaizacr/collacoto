@@ -396,57 +396,7 @@
   <!-- JAVASCRIPT DEL CARRUSEL -->
 
   <script>
-
-    /*
-      INTERACCION Y CONTACTO:
-      Esta seccion hace funcional el formulario de contacto.
-      1. Captura el envio del formulario.
-      2. Valida que nombre, correo y mensaje no esten vacios.
-      3. Revisa que el correo tenga un formato basico correcto.
-      4. Simula la recepcion del mensaje guardandolo en un objeto.
-    */
-    const formularioContacto = document.getElementById("formulario-contacto");
-    const avisoFormulario = document.getElementById("formulario-aviso");
-
-    formularioContacto.addEventListener("submit", function (evento) {
-      // Evita que la pagina se recargue al presionar "Enviar mensaje".
-      evento.preventDefault();
-
-      const nombre = document.getElementById("nombre").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const mensaje = document.getElementById("mensaje").value.trim();
-      const correoValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-
-      // Validacion basica de datos solicitada para el portal.
-      if (!nombre || !email || !mensaje) {
-        avisoFormulario.textContent = "Por favor completa todos los campos antes de enviar.";
-        avisoFormulario.className = "formulario-aviso error";
-        return;
-      }
-
-      if (!correoValido) {
-        avisoFormulario.textContent = "Ingresa un correo electronico valido.";
-        avisoFormulario.className = "formulario-aviso error";
-        return;
-      }
-
-      // Armar y abrir Outlook con los datos del visitante.
-      const destinatario = formularioContacto.action.replace("mailto:", "");
-      const asunto = encodeURIComponent("Mensaje desde el Portal de Collacoto");
-      const cuerpo = encodeURIComponent(
-        "Nombre: " + nombre + "\n" +
-        "Correo: " + email + "\n\n" +
-        "Mensaje:\n" + mensaje
-      );
-
-      // Abre Outlook (o el cliente de correo predeterminado) con los datos listos.
-      window.location.href = "mailto:" + destinatario + "?subject=" + asunto + "&body=" + cuerpo;
-
-      avisoFormulario.textContent = "Se está abriendo tu cliente de correo para enviar el mensaje.";
-      avisoFormulario.className = "formulario-aviso exito";
-      formularioContacto.reset();
-    });
-
+    // Se mantiene únicamente la lógica del carrusel para que no interfiera
     const slides = document.querySelectorAll(".slide");
     const heroVideo = document.getElementById("hero-video");
 
@@ -454,12 +404,10 @@
     let timer;
 
     function cambiarSlide() {
-
       slides.forEach((slide) => {
         slide.classList.remove("active");
       });
 
-      // Pausar video si estaba activo
       if (heroVideo) heroVideo.pause();
 
       index++;
@@ -467,12 +415,10 @@
 
       slides[index].classList.add("active");
 
-      // Si el slide activo tiene video, reproducirlo y esperar más
       const slideActivo = slides[index];
       if (slideActivo.classList.contains("slide-video") && heroVideo) {
         heroVideo.currentTime = 0;
         heroVideo.play();
-        // Esperar duración del video (máx 10s) antes de avanzar
         clearInterval(timer);
         const espera = Math.min((heroVideo.duration || 10) * 1000, 10000);
         setTimeout(() => {
@@ -483,8 +429,11 @@
     }
 
     timer = setInterval(cambiarSlide, 4000);
-
   </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
 </body>
 
